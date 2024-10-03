@@ -126,3 +126,22 @@ button:hover {
 #back:hover {
     background-color: #c82333; /* Màu nền khi di chuột qua nút quay lại */
 }
+
+#restart {
+    margin-top: 2px; /* Thêm khoảng cách giữa nút chơi lại và các phần khác */
+    padding: 1vh 2vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #28a745; /* Màu nền cho nút Chơi lại */
+    color: white;
+    border: none;
+    transition: background-color 0.3s;
+    position: fixed; /* Đặt nút cố định trên màn hình */
+    top: 6vh; /* Khoảng cách từ đỉnh màn hình để nằm dưới nút quay lại */
+    right: 2vw; /* Khoảng cách từ bên phải */
+}
+
+#restart:hover {
+    background-color: #218838; /* Màu nền khi di chuột qua nút Chơi lại */
+}
