@@ -94,7 +94,7 @@ function checkMatch() {
       firstCard.classList.remove('flipped');
       secondCard.classList.remove('flipped');
       resetTurn(false);
-    }, 1500);
+    }, 1000);
   }
 }
 
