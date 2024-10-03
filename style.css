@@ -12,22 +12,7 @@ body {
 
 .menu {
     text-align: center;
-}
-
-#player-info {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2vh; /* Khoảng cách dựa trên chiều cao của viewport */
-}
-
-#player-info h2 {
-    margin: 0 1vw; /* Giảm khoảng cách giữa các tiêu đề theo chiều rộng màn hình */
-    font-size: 2vw; /* Kích thước chữ linh hoạt theo chiều rộng của viewport */
-}
-
-#player-info .active {
-    color: red;
-    font-size: 2vw; /* Giảm kích thước chữ cho phần tử đang hoạt động */
+    padding-right: 4px; /* Thêm 4px vào phần menu */
 }
 
 #grid {
@@ -42,41 +27,10 @@ body {
     padding-right: 4px; /* Thêm 4px vào phần lưới */
 }
 
-.hidden {
-    display: none;
-}
-
 button {
     margin: 1vh;
     padding: 1vh 2vw; /* Kích thước padding linh hoạt theo chiều rộng và chiều cao màn hình */
     font-size: 1.5vw; /* Kích thước chữ linh hoạt */
     cursor: pointer;
-}
-
-.card {
-    width: 100%; /* Đặt chiều rộng thẻ để chiếm toàn bộ ô lưới */
-    height: 100%; /* Đặt chiều cao thẻ để chiếm toàn bộ ô lưới, tạo hình vuông */
-    background-image: url('face-down/placeholder.jpg');
-    background-size: cover;
-    border: 1px solid #ccc;
-    cursor: pointer;
-}
-
-.card.flipped {
-    background-size: contain;
-}
-
-.game-controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 2vh; /* Khoảng cách dựa trên chiều cao màn hình */
-}
-
-#back {
-    position: fixed;
-    top: 2vh; /* Khoảng cách từ đỉnh dựa trên chiều cao màn hình */
-    right: 2vw; /* Khoảng cách từ bên phải dựa trên chiều rộng màn hình */
-    padding: 1vh 2vw;
-    font-size: 1.5vw;
-    cursor: pointer;
+    padding-right: 4px; /* Thêm 4px vào các nút */
 }
