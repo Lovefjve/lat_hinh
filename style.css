@@ -8,11 +8,13 @@ body {
     background-color: #f4f4f4;
     flex-direction: column;
     padding-right: 4px; /* Thêm 4px bên phải màn hình */
+    padding-left: 0; /* Loại bỏ khoảng cách bên trái */
 }
 
 .menu {
     text-align: center;
     padding-right: 4px; /* Thêm 4px vào phần menu */
+    padding-left: 0; /* Loại bỏ khoảng cách bên trái */
 }
 
 #player-info {
@@ -20,6 +22,7 @@ body {
     justify-content: center;
     margin-bottom: 2vh; /* Khoảng cách dựa trên chiều cao của viewport */
     padding-right: 4px; /* Thêm 4px vào phần thông tin người chơi */
+    padding-left: 0; /* Loại bỏ khoảng cách bên trái */
 }
 
 #player-info h2 {
@@ -42,6 +45,7 @@ body {
     height: 70vh; /* Giới hạn chiều cao theo viewport height */
     transform-origin: top;
     padding-right: 4px; /* Thêm 4px vào phần lưới */
+    padding-left: 0; /* Loại bỏ khoảng cách bên trái */
 }
 
 .hidden {
@@ -54,6 +58,7 @@ button {
     font-size: 1.5vw; /* Kích thước chữ linh hoạt */
     cursor: pointer;
     padding-right: 4px; /* Thêm 4px vào các nút */
+    padding-left: 0; /* Loại bỏ khoảng cách bên trái */
 }
 
 .card {
@@ -74,6 +79,7 @@ button {
     justify-content: center;
     margin-top: 2vh; /* Khoảng cách dựa trên chiều cao màn hình */
     padding-right: 4px; /* Thêm 4px vào phần điều khiển trò chơi */
+    padding-left: 0; /* Loại bỏ khoảng cách bên trái */
 }
 
 #back {
@@ -84,4 +90,5 @@ button {
     font-size: 1.5vw;
     cursor: pointer;
     padding-right: 4px; /* Thêm 4px vào nút quay lại */
+    padding-left: 0; /* Loại bỏ khoảng cách bên trái */
 }
