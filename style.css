@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 85vh;
     margin: 0;
     background-color: #f4f4f4;
     flex-direction: column;
@@ -25,7 +25,7 @@ body {
 }
 
 #player-info h2 {
-    margin: 1vh 0; /* Giảm khoảng cách giữa các tiêu đề theo chiều dọc */
+    margin: 0.2vh 0; /* Giảm khoảng cách giữa các tiêu đề theo chiều dọc */
     font-size: 2vw; /* Kích thước chữ linh hoạt theo chiều rộng của viewport */
 }
 
