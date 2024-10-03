@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 0 auto; /* Căn giữa lưới theo chiều ngang */
     background-color: #f4f4f4;
     flex-direction: column; /* Giữ các phần tử hiển thị theo cột */
 }
