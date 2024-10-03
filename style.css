@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    flex-direction: column; /* Giữ các phần tử hiển thị theo cột */
+}
+
+.menu {
+    text-align: center;
+}
+
+#player-info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#player-info h2 {
+    margin: 0 10px; /* Giảm khoảng cách giữa các tiêu đề */
+    font-size: 14px; /* Giảm kích thước chữ cho thông tin người chơi */
+}
+
+#player-info .active {
+    color: red;
+    font-size: 14px; /* Giảm kích thước chữ cho phần tử đang hoạt động */
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* Giữ số cột là 10 */
+    grid-template-rows: repeat(10, 1fr); /* Giữ số hàng là 10 */
+    gap: 10px;
+    margin: 0 auto; /* Căn giữa lưới theo chiều ngang */
+    max-width: 90vw; /* Giới hạn chiều rộng tối đa của lưới */
+    max-height: 80vh; /* Giới hạn chiều cao tối đa của lưới */
+    transform: scale(0.8); /* Thu nhỏ lưới lại theo tỷ lệ */
+    transform-origin: top; /* Đặt gốc để thu nhỏ từ trên xuống */
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    margin: 10px;
+    padding: 5px 10px; /* Giảm kích thước padding của nút */
+    font-size: 12px; /* Giảm kích thước chữ của nút */
+    cursor: pointer;
+}
+
+.card {
+    width: 100%; /* Đặt chiều rộng thẻ để chiếm toàn bộ ô lưới */
+    height: 100%; /* Đặt chiều cao thẻ để chiếm toàn bộ ô lưới, tạo hình vuông */
+    background-image: url('face-down/placeholder.jpg');
+    background-size: cover;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.card.flipped {
+    background-size: contain;
+}
+
+.game-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#back {
+    position: fixed; /* Đặt vị trí cố định cho nút quay lại */
+    bottom: 5px; /* Đặt nút ở vị trí cách đáy 5px */
+    left: 50%;
+    transform: translateX(-50%); /* Căn giữa nút theo chiều ngang */
+    padding: 5px 10px; /* Giảm kích thước padding cho nút quay lại */
+    font-size: 12px; /* Giảm kích thước chữ cho nút quay lại */
+}
+

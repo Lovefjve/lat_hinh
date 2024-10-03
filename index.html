@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Lật Hình</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <h1>Chọn số người chơi</h1>
+        <button id="two-players">Chơi 2 người</button>
+        <button id="three-players">Chơi 3 người</button>
+    </div>
+    
+    <div class="game-board hidden">
+        <div id="player-info">
+            <h2>Người chơi 1: <span id="score1">0</span> điểm</h2>
+            <h2>Người chơi 2: <span id="score2">0</span> điểm</h2>
+            <h2 id="player3-info" class="hidden">Người chơi 3: <span id="score3">0</span> điểm</h2>
+            <button id="back">Quay lại</button> <!-- Nút quay lại nằm trong phần thông tin người chơi -->
+        </div>
+        <div id="grid" class="grid"></div>
+        <div class="game-controls">
+            <button id="restart" class="hidden">Chơi lại</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
