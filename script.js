@@ -135,18 +135,20 @@ function checkGameEnd() {
 }
 
 function restartGame() {
-  // Reset điểm người chơi
-  points = [0, 0, 0];  // Reset tất cả điểm về 0
+  if (confirm('Bạn có chắc chắn muốn bỏ trận đấu này?')) {
+    // Reset điểm người chơi
+    points = [0, 0, 0];  // Reset tất cả điểm về 0
   
-  // Reset người chơi hiện tại về người chơi đầu tiên
-  currentPlayer = 1;
+    // Reset người chơi hiện tại về người chơi đầu tiên
+    currentPlayer = 1;
   
-  // Cập nhật giao diện điểm người chơi
-  updatePlayerInfo();
+    // Cập nhật giao diện điểm người chơi
+    updatePlayerInfo();
   
-  // Tải lại hình ảnh và tạo lưới mới
-  loadImages();
-  createGrid();
+    // Tải lại hình ảnh và tạo lưới mới
+    loadImages();
+    createGrid();
+  }
 }
 
 
