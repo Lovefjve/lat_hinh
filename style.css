@@ -31,8 +31,8 @@ body {
 
 #grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr); /* Giữ số cột là 10 */
-    grid-template-rows: repeat(10, 1fr); /* Giữ số hàng là 10 */
+    grid-template-columns: repeat(8, 1fr); /* Giữ số cột là 10 */
+    grid-template-rows: repeat(9, 1fr); /* Giữ số hàng là 10 */
     gap: 10px;
     margin: 0 auto; /* Căn giữa lưới theo chiều ngang */
     max-width: 90vw; /* Giới hạn chiều rộng tối đa của lưới */
