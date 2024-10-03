@@ -4,10 +4,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0; /* Xóa hoàn toàn lề trái và phải */
+    margin: 0 2px; /* Thêm lề trái và lề phải mỗi bên 2px */
     background-color: #f4f4f4;
     flex-direction: column;
-    width: 100vw; /* Chiều rộng chiếm toàn bộ viewport */
+    width: calc(100vw - 4px); /* Chiều rộng trừ đi 4px để bù lại phần lề */
 }
 
 .menu {
@@ -35,8 +35,8 @@ body {
     grid-template-columns: repeat(8, 1fr); /* 8 cột */
     grid-template-rows: repeat(9, 1fr); /* 9 hàng */
     gap: 1vw; /* Khoảng cách giữa các ô lưới */
-    margin: 0; /* Xóa lề trái và phải */
-    width: 100vw; /* Chiều rộng chiếm toàn bộ viewport */
+    margin: 0 auto; /* Căn giữa lưới */
+    width: calc(100vw - 4px); /* Trừ đi 4px lề trái và phải */
     height: 70vh; /* Chiều cao theo viewport height */
     transform-origin: top;
 }
