@@ -26,12 +26,12 @@ body {
 
 #player-info h2 {
     margin: 0.2vh 0; /* Giảm khoảng cách giữa các tiêu đề theo chiều dọc */
-    font-size: 2vw; /* Kích thước chữ linh hoạt theo chiều rộng của viewport */
+    font-size: 4vw; /* Kích thước chữ linh hoạt theo chiều rộng của viewport */
 }
 
 #player-info .active {
     color: red;
-    font-size: 2vw; /* Kích thước chữ cho phần tử đang hoạt động */
+    font-size: 4vw; /* Kích thước chữ cho phần tử đang hoạt động */
 }
 
 #grid {
