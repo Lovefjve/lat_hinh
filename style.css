@@ -72,11 +72,12 @@ button {
 }
 
 #back {
-    position: fixed; /* Đặt vị trí cố định cho nút quay lại */
-    bottom: 5px; /* Đặt nút ở vị trí cách đáy 5px */
-    left: 50%;
-    transform: translateX(-50%); /* Căn giữa nút theo chiều ngang */
+    position: fixed; /* Giữ vị trí cố định cho nút quay lại */
+    top: 5px; /* Đặt nút cách đỉnh 5px */
+    right: 5px; /* Đặt nút cách bên phải 5px */
     padding: 5px 10px; /* Giảm kích thước padding cho nút quay lại */
     font-size: 12px; /* Giảm kích thước chữ cho nút quay lại */
+    cursor: pointer;
 }
+
 

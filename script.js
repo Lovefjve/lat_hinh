@@ -22,7 +22,7 @@ function startGame(playerCount) {
 
 function loadImages() {
   images = [];  // Reset mảng hình ảnh trước khi tải lại
-  for (let i = 1; i <= 50; i++) { // Tạo 50 cặp hình ảnh
+  for (let i = 1; i <= 36; i++) { // Tạo 50 cặp hình ảnh
     const imagePath = `img/image${i}.jpg`; // Sử dụng định dạng image(số).jpg
     images.push(imagePath, imagePath); // Thêm cả 2 ảnh để tạo cặp
     console.log("Loading image:", imagePath);  // Kiểm tra đường dẫn ảnh
@@ -33,8 +33,8 @@ function loadImages() {
 function createGrid() {
   const grid = document.getElementById('grid');
   grid.innerHTML = '';
-  grid.style.gridTemplateColumns = 'repeat(10, 70px)'; // 10 cột
-  grid.style.gridTemplateRows = 'repeat(10, 90px)'; // 10 hàng
+  grid.style.gridTemplateColumns = 'repeat(8, 70px)'; // 10 cột
+  grid.style.gridTemplateRows = 'repeat(9, 90px)'; // 10 hàng
 
   images.forEach((src, index) => {
     const card = document.createElement('div');
