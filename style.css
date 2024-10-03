@@ -66,8 +66,8 @@ button {
     width: 100%;
     height: 100%;
     background-size: cover;
-    transition: opacity 0.3s ease; /* Hiệu ứng chuyển tiếp cho độ mờ */
-    opacity: 0.5; /* Mờ hình ảnh khi thẻ chưa được lật */
+    /* transition: opacity 0.3s ease; 
+    opacity: 0.5; */
 }
 
 .card.flipped .image {
