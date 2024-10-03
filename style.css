@@ -3,11 +3,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+    height: 95vh;
     margin: 0;
     background-color: #f4f4f4;
     flex-direction: column;
     padding: 0 0.7px; /* Giữ khoảng cách 0.7px hai bên trái, phải */
+}
+
+.game-board {
+    width: 96vw; /* Chiếm 80% chiều rộng của viewport */
+    height: 90vh; /* Chiếm 90% chiều cao của viewport */
+    display: flex; /* Sử dụng flexbox để xếp theo cột */
+    flex-direction: column; /* Xếp theo cột */
+    gap: 0.6vh; /* Khoảng cách giữa các phần tử */
+    margin: 0;
+    padding: 0;
 }
 
 .menu {
@@ -38,11 +48,10 @@ body {
     display: grid;
     grid-template-columns: repeat(8, 1fr); /* 8 cột */
     grid-template-rows: repeat(9, 1fr); /* 9 hàng */
-    gap: 1vw;
-    margin: 0 auto;
-    width: 80vw; /* Giới hạn chiều rộng theo viewport width */
-    height: 70vh; /* Giới hạn chiều cao theo viewport height */
-    transform-origin: top;
+    gap: 1vw; /* Khoảng cách giữa các ô */
+    margin: 0 auto; /* Giữa các phần tử trong lưới */
+    width: 100%; /* Chiếm toàn bộ chiều rộng của .game-board */
+    height: 100%; /* Chiếm toàn bộ chiều cao của .game-board */
 }
 
 .hidden {
@@ -114,7 +123,7 @@ button:hover {
     top: 2vh; /* Khoảng cách từ đỉnh dựa trên chiều cao màn hình */
     right: 2vw; /* Khoảng cách từ bên phải dựa trên chiều rộng màn hình */
     padding: 1vh 2vw;
-    font-size: 1.5vw;
+    font-size: 2vw;
     cursor: pointer;
     border-radius: 5px; /* Bo tròn cạnh cho nút quay lại */
     background-color: #dc3545; /* Màu nền cho nút quay lại */
@@ -130,7 +139,7 @@ button:hover {
 #restart {
     margin-top: 2px; /* Thêm khoảng cách giữa nút chơi lại và các phần khác */
     padding: 1vh 2vw;
-    font-size: 1.5vw;
+    font-size: 2vw;
     cursor: pointer;
     border-radius: 5px;
     background-color: #28a745; /* Màu nền cho nút Chơi lại */
@@ -138,7 +147,7 @@ button:hover {
     border: none;
     transition: background-color 0.3s;
     position: fixed; /* Đặt nút cố định trên màn hình */
-    top: 6vh; /* Khoảng cách từ đỉnh màn hình để nằm dưới nút quay lại */
+    top: 6.5vh; /* Khoảng cách từ đỉnh màn hình để nằm dưới nút quay lại */
     right: 2vw; /* Khoảng cách từ bên phải */
 }
 
