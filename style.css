@@ -4,9 +4,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0 auto; /* Căn giữa lưới theo chiều ngang */
+    margin: 0;
     background-color: #f4f4f4;
-    flex-direction: column; /* Giữ các phần tử hiển thị theo cột */
+    flex-direction: column;
 }
 
 .menu {
@@ -16,29 +16,28 @@ body {
 #player-info {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 2vh; /* Khoảng cách dựa trên chiều cao của viewport */
 }
 
 #player-info h2 {
-    margin: 0 10px; /* Giảm khoảng cách giữa các tiêu đề */
-    font-size: 14px; /* Giảm kích thước chữ cho thông tin người chơi */
+    margin: 0 1vw; /* Giảm khoảng cách giữa các tiêu đề theo chiều rộng màn hình */
+    font-size: 2vw; /* Kích thước chữ linh hoạt theo chiều rộng của viewport */
 }
 
 #player-info .active {
     color: red;
-    font-size: 14px; /* Giảm kích thước chữ cho phần tử đang hoạt động */
+    font-size: 2vw; /* Giảm kích thước chữ cho phần tử đang hoạt động */
 }
 
 #grid {
     display: grid;
-    grid-template-columns: repeat(8, 1fr); /* Giữ số cột là 10 */
-    grid-template-rows: repeat(9, 1fr); /* Giữ số hàng là 10 */
-    gap: 10px;
-    margin: 0 auto; /* Căn giữa lưới theo chiều ngang */
-    max-width: 90vw; /* Giới hạn chiều rộng tối đa của lưới */
-    max-height: 80vh; /* Giới hạn chiều cao tối đa của lưới */
-    transform: scale(0.8); /* Thu nhỏ lưới lại theo tỷ lệ */
-    transform-origin: top; /* Đặt gốc để thu nhỏ từ trên xuống */
+    grid-template-columns: repeat(8, 1fr); /* 8 cột */
+    grid-template-rows: repeat(9, 1fr); /* 9 hàng */
+    gap: 1vw;
+    margin: 0 auto;
+    width: 80vw; /* Giới hạn chiều rộng theo viewport width */
+    height: 70vh; /* Giới hạn chiều cao theo viewport height */
+    transform-origin: top;
 }
 
 .hidden {
@@ -46,9 +45,9 @@ body {
 }
 
 button {
-    margin: 10px;
-    padding: 5px 10px; /* Giảm kích thước padding của nút */
-    font-size: 12px; /* Giảm kích thước chữ của nút */
+    margin: 1vh;
+    padding: 1vh 2vw; /* Kích thước padding linh hoạt theo chiều rộng và chiều cao màn hình */
+    font-size: 1.5vw; /* Kích thước chữ linh hoạt */
     cursor: pointer;
 }
 
@@ -68,16 +67,14 @@ button {
 .game-controls {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 2vh; /* Khoảng cách dựa trên chiều cao màn hình */
 }
 
 #back {
-    position: fixed; /* Giữ vị trí cố định cho nút quay lại */
-    top: 5px; /* Đặt nút cách đỉnh 5px */
-    right: 5px; /* Đặt nút cách bên phải 5px */
-    padding: 5px 10px; /* Giảm kích thước padding cho nút quay lại */
-    font-size: 12px; /* Giảm kích thước chữ cho nút quay lại */
+    position: fixed;
+    top: 2vh; /* Khoảng cách từ đỉnh dựa trên chiều cao màn hình */
+    right: 2vw; /* Khoảng cách từ bên phải dựa trên chiều rộng màn hình */
+    padding: 1vh 2vw;
+    font-size: 1.5vw;
     cursor: pointer;
 }
-
-
