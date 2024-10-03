@@ -4,10 +4,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0 2px; /* Thêm lề trái và lề phải mỗi bên 2px */
+    margin: 0;
     background-color: #f4f4f4;
     flex-direction: column;
-    width: calc(100vw - 4px); /* Chiều rộng trừ đi 4px để bù lại phần lề */
+    padding: 0 2px; /* Giữ khoảng cách 2px hai bên trái, phải */
 }
 
 .menu {
@@ -16,28 +16,29 @@ body {
 
 #player-info {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Thay đổi để xếp theo cột dọc */
+    align-items: flex-start; /* Căn giữa các tiêu đề theo chiều ngang */
     margin-bottom: 2vh; /* Khoảng cách dựa trên chiều cao của viewport */
 }
 
 #player-info h2 {
-    margin: 0 1vw; /* Khoảng cách giữa các tiêu đề theo chiều rộng màn hình */
+    margin: 1vh 0; /* Giảm khoảng cách giữa các tiêu đề theo chiều dọc */
     font-size: 2vw; /* Kích thước chữ linh hoạt theo chiều rộng của viewport */
 }
 
 #player-info .active {
     color: red;
-    font-size: 2vw; /* Kích thước chữ của phần tử đang hoạt động */
+    font-size: 2vw; /* Giảm kích thước chữ cho phần tử đang hoạt động */
 }
 
 #grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr); /* 8 cột */
     grid-template-rows: repeat(9, 1fr); /* 9 hàng */
-    gap: 1vw; /* Khoảng cách giữa các ô lưới */
-    margin: 0 auto; /* Căn giữa lưới */
-    width: calc(100vw - 4px); /* Trừ đi 4px lề trái và phải */
-    height: 70vh; /* Chiều cao theo viewport height */
+    gap: 1vw;
+    margin: 0 auto;
+    width: 80vw; /* Giới hạn chiều rộng theo viewport width */
+    height: 70vh; /* Giới hạn chiều cao theo viewport height */
     transform-origin: top;
 }
 
@@ -53,16 +54,40 @@ button {
 }
 
 .card {
-    width: 100%; /* Chiều rộng thẻ chiếm toàn bộ ô lưới */
-    height: 100%; /* Chiều cao thẻ chiếm toàn bộ ô lưới */
-    background-image: url('face-down/placeholder.jpg');
-    background-size: cover;
-    border: 1px solid #ccc;
+    position: relative; /* Để có thể sử dụng position cho các phần tử con */
+    width: 100%; /* Đặt chiều rộng thẻ để chiếm toàn bộ ô lưới */
+    height: 100%; /* Đặt chiều cao thẻ để chiếm toàn bộ ô lưới, tạo hình vuông */
+    overflow: hidden; /* Đảm bảo các hình ảnh không bị tràn ra ngoài */
     cursor: pointer;
+    background-color: #fff; /* Thêm màu nền cho thẻ */
 }
 
-.card.flipped {
-    background-size: contain;
+.card .image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: opacity 0.3s ease; /* Hiệu ứng chuyển tiếp cho độ mờ */
+    opacity: 0.5; /* Mờ hình ảnh khi thẻ chưa được lật */
+}
+
+.card.flipped .image {
+    opacity: 1; /* Hiện hình ảnh khi thẻ được lật */
+}
+
+.card .overlay {
+    position: absolute; /* Đặt lớp phủ ở vị trí tuyệt đối */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('face-down/placeholder.jpg'); /* Hình ảnh lớp phủ */
+    background-size: cover; /* Kích thước phủ khớp với thẻ */
+    transition: opacity 0.3s ease; /* Hiệu ứng chuyển tiếp cho độ mờ */
+    opacity: 1; /* Hiện lớp phủ khi thẻ chưa lật */
+}
+
+.card.flipped .overlay {
+    opacity: 0; /* Ẩn lớp phủ khi thẻ được lật */
 }
 
 .game-controls {

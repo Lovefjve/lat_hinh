@@ -33,14 +33,27 @@ function loadImages() {
 function createGrid() {
   const grid = document.getElementById('grid');
   grid.innerHTML = '';
-  grid.style.gridTemplateColumns = 'repeat(8, 70px)'; // 10 cột
-  grid.style.gridTemplateRows = 'repeat(9, 90px)'; // 10 hàng
+  grid.style.gridTemplateColumns = 'repeat(8, 1fr)'; // 8 cột
+  grid.style.gridTemplateRows = 'repeat(9, 1fr)'; // 9 hàng
 
   images.forEach((src, index) => {
     const card = document.createElement('div');
     card.classList.add('card');
     card.dataset.image = src; // Gán đúng đường dẫn ảnh
     card.dataset.index = index;
+
+    // Tạo thẻ chứa hình ảnh
+    const img = document.createElement('div');
+    img.classList.add('image');
+    img.style.backgroundImage = `url(${src})`; // Đặt hình ảnh cho thẻ
+    card.appendChild(img);
+
+    // Tạo lớp phủ cho thẻ
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    overlay.style.backgroundImage = 'url(face-down/placeholder.jpg)'; // Đặt hình ảnh cho lớp phủ
+    card.appendChild(overlay);
+
     card.addEventListener('click', flipCard);
     grid.appendChild(card);
   });
@@ -50,7 +63,9 @@ function flipCard() {
   if (!canFlip || this.classList.contains('flipped')) return;
 
   this.classList.add('flipped');
-  this.style.backgroundImage = `url(${this.dataset.image})`; // Gán đúng đường dẫn ảnh
+
+  // Lật thẻ, không cần gán hình ảnh ở đây
+  // Hình ảnh đã được đặt trong phần tử con
 
   if (!firstCard) {
     firstCard = this;
@@ -78,8 +93,6 @@ function checkMatch() {
     setTimeout(() => {
       firstCard.classList.remove('flipped');
       secondCard.classList.remove('flipped');
-      firstCard.style.backgroundImage = `url('face-down/placeholder.jpg')`; // Đảm bảo tệp này tồn tại
-      secondCard.style.backgroundImage = `url('face-down/placeholder.jpg')`;
       resetTurn(false);
     }, 1000);
   }
